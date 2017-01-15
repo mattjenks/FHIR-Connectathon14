@@ -3,8 +3,7 @@
 // Define the `PractitionerListApp` module
 angular.module('PractitionerListApp', [
     'ngRoute',
-    'PractitionerListApp.version'
+    'PractitionerListApp.version',
     'PractitionerListApp.practitioner',
-//    'PractitionerListApp.practitioner-list',
-//    'PractitionerListApp.practitioner'
+    'PractitionerListApp.practitioner-list'
 ]);
