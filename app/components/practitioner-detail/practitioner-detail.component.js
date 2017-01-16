@@ -8,7 +8,7 @@ angular.
     controller: ['$routeParams', 'Practitioner',
       function PractitionerDetailController($routeParams, Practitioner) {
         var self = this;
-        self.practitioner = Practitioner.get({_id: $routeParams._id});
+        self.practitioner = Practitioner.get({"_id": $routeParams._id});
       }
     ]
   });

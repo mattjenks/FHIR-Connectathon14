@@ -12,7 +12,7 @@
       <ul class="phones">
         <li ng-repeat="practitioner in $ctrl.practitioners.entry"
             class="thumbnail phone-list-item">
-          <a href="#!/practitioner/{{practitioner.resource.id}}">{{practitioner.resource.name[0].given[0]}} {{practitioner.resource.name[0].family}}</a>
+          <a href="#!/practitioner/{{practitioner.resource.id}}">{{practitioner.resource.name[0].given[0]}} {{practitioner.resource.name[0].family}} [{{practitioner.resource.name[0].text}}]</a>
         </li>
       </ul>
     </div>

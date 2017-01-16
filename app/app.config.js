@@ -10,7 +10,7 @@ config(['$locationProvider' ,'$routeProvider',
         when('/practitioners', {
             template: '<practitioner-list></practitioner-list>'
         }).
-        when('/practitioners/:_id', {
+        when('/practitioner/:_id', {
             template: '<practitioner-detail></practitioner-detail>'
         }).
         otherwise('/practitioners');
