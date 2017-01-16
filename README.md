@@ -18,8 +18,8 @@ git checkout -f step0
 ## My primary goals for this app are:
 
 1. create an Angular app, seeded from [angular-seed] - tag step0
-2. Display a list of practitioners from a FHIR STU3 server [fhir-versions], [fhir-wiki] - tag step1
-3. Select a practitioner and display the detail for that practitioner 
+2. Display a list of practitioners from a FHIR STU3 server [fhir-versions], [fhir-wiki] 
+3. Select a practitioner and display the detail for that practitioner - tag step1
 4. implement a smoke test to be run after install
 5. implement end to end testing in a browser ([protractor]/[chrome])
 6. implement client side FHIR validation in a FHIR test server, like [touchstone]
