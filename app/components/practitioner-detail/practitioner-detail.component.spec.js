@@ -33,12 +33,9 @@ describe('PractitionerListApp.practitioner-detail', function() {
     }));
 
     it('should fetch the practitioner details', function() {
-      jasmine.addCustomEqualityTester(angular.equals);
-
-      expect(ctrl.practitioner).toEqual({});
-
+      expect(angular.equals(ctrl.practitioner, {})).to.be.true;
       $httpBackend.flush();
-      expect(ctrl.practitioner).toEqual(PractitionerData);
+      expect(angular.equals(ctrl.practitioner, PractitionerData)).to.be.true;
     });
 
   });

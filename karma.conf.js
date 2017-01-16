@@ -17,14 +17,15 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['mocha','chai'],
 
     browsers: ['Chrome'],
 
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-jasmine',
+      'karma-mocha',
+      'karma-chai',
       'karma-junit-reporter'
     ],
 

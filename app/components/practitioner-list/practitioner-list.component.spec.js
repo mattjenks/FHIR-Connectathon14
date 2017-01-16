@@ -72,12 +72,10 @@ describe('PractitionerListApp.practitioner-list', function() {
     }));
 
     it('should create a `practitioners` property with 2 practitioners fetched with `$http`', function() {
-      jasmine.addCustomEqualityTester(angular.equals);
-
-      expect(ctrl.practitioners).toEqual({});
+      expect(angular.equals(ctrl.practitioners, {})).to.be.true;
 
       $httpBackend.flush();
-      expect(ctrl.practitioners).toEqual(practitionerData);
+      expect(angular.equals(ctrl.practitioners, practitionerData)).to.be.true;
     });
   });
 

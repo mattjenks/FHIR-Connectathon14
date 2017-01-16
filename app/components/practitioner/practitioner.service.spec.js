@@ -61,7 +61,6 @@ describe('PractitionerListApp.practitioner', function() {
 
     // Add a custom equality tester before each test
     beforeEach(function() {
-        jasmine.addCustomEqualityTester(angular.equals);
     });
 
     // Load the module that contains the `Practitioner` service before each test
@@ -85,19 +84,16 @@ describe('PractitionerListApp.practitioner', function() {
     it('should fetch the practitioners data from STU3 FHIR server `practitioner`', function() {
         var practitioners = Practitioner.query();
 
-        expect(practitioners).toEqual({});
-
+        expect(angular.equals(practitioners, {})).to.be.true;
         $httpBackend.flush();
-        expect(practitioners).toEqual(practitionerData);
-        expect(practitioners.total).toEqual(89);
+        expect(angular.equals(practitioners, practitionerData)).to.be.true;
     });
 
     it('should have a total result number of 89', function() {
         var practitioners = Practitioner.query();
 
-        expect(practitioners).toEqual({});
-
+        expect(angular.equals(practitioners, {})).to.be.true;
         $httpBackend.flush();
-        expect(practitioners.total).toEqual(89);
+        expect(practitioners.total).to.equal(89);
     });
 });
