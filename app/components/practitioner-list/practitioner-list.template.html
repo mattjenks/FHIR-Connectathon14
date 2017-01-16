@@ -1,38 +1,21 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      Hi Matt!
       <!--Sidebar content-->
-<!--
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
-      </p>
-
+      <p><div>PL - Practitioner List App: v<span app-version></span></div></p>
+      <p><div>Total Practitioners: {{$ctrl.practitioners.total}}</div></p>
     </div>
+
     <div class="col-md-10">
--->
+
       <!--Body content-->
-      <!--
-            <ul class="phones">
-              <li ng-repeat="practitioner in $ctrl.practitioners | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-                  class="thumbnail phone-list-item">
-                <a href="#!/practitioner/{{practitioner.id}}" class="thumb">
-                  <img ng-src="{{practitioner.imageUrl}}" alt="{{practitioner.name}}" />
-                </a>
-                <a href="#!/practitioner/{{practitioner.id}}">{{practitioner.name}}</a>
-                <p>{{practitioner.snippet}}</p>
-              </li>
-            </ul>
-      -->
+      <ul class="phones">
+        <li ng-repeat="practitioner in $ctrl.practitioners.entry"
+            class="thumbnail phone-list-item">
+          <a href="#!/practitioner/{{practitioner.resource.id}}">{{practitioner.resource.name[0].given[0]}} {{practitioner.resource.name[0].family}}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+

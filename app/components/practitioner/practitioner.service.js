@@ -8,7 +8,7 @@ factory('Practitioner', ['$resource',
             query: {
                 method: 'GET',
                 params: { "_sort":"_id", "_format":"json"},
-                isArray: true
+                isArray: false
             }
         });
     }
