@@ -5,5 +5,6 @@ angular.module('PractitionerListApp', [
     'ngRoute',
     'PractitionerListApp.version',
     'PractitionerListApp.practitioner',
-    'PractitionerListApp.practitioner-list'
+    'PractitionerListApp.practitioner-list',
+    'PractitionerListApp.practitioner-detail'
 ]);

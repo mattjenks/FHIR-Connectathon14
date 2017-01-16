@@ -70,7 +70,7 @@ describe('PractitionerListApp.practitioner', function() {
     // Instantiate the service and "train" `$httpBackend` before each test
     beforeEach(inject(function(_$httpBackend_, _Practitioner_) {
         $httpBackend = _$httpBackend_;
-        $httpBackend.expectGET('http://fhir3.healthintersections.com.au/open/Practitioner?_format=json&_sort=_id').respond(practitionerData);
+        $httpBackend.expectGET('http://fhir3.healthintersections.com.au/open/Practitioner?_format=json&_id=&_sort=_id').respond(practitionerData);
 
         Practitioner = _Practitioner_;
     }));
