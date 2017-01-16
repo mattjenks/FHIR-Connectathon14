@@ -28,8 +28,7 @@ describe('PractitionerListApp.practitioner-list', function() {
 
       beforeEach(inject(function($componentController, _$httpBackend_) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('practitioners/practitioners.json')
-                  .respond(practitionerData);
+      $httpBackend.expectGET('http://fhir3.healthintersections.com.au/open/Practitioner?_format=json&_sort=_id').respond(practitionerData);
 
       ctrl = $componentController('practitionerList');
     }));
